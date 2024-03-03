@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_00000169518126629138030930000003035896939665232771_);}
+	.st1{fill:#FF0005;}
+	.st2{fill:#FFFFFF;}
+</style>
+<g>
+	<g>
+		<g>
+			<defs>
+				<ellipse id="SVGID_1_" transform="matrix(0.3827 -0.9239 0.9239 0.3827 -9.1969 46.2359)" cx="30" cy="30" rx="30" ry="30"/>
+			</defs>
+			<clipPath id="SVGID_00000067944966464321299830000015472222316705074103_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			</clipPath>
+			<g style="clip-path:url(#SVGID_00000067944966464321299830000015472222316705074103_);">
+				<g>
+					<g>
+						<rect x="-15" y="0" class="st1" width="90" height="60"/>
+					</g>
+				</g>
+				<rect x="11.4" y="24.4" class="st2" width="37.3" height="11.2"/>
+				<rect x="24.4" y="11.3" class="st2" width="11.2" height="37.5"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

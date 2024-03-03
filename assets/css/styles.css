@@ -1,0 +1,152 @@
+:root {
+
+/* Colours
+------------------------------ */
+--black: #000000;
+--white: #ffffff;
+
+}
+
+/*--------------------------------------------------------------
+  Defauts
+--------------------------------------------------------------*/
+body, html {
+  background: var(--black);
+  font: 400 1rem sans-serif;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  /* color: var(--white); */
+  
+  .footer__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1rem 0 0;
+    max-width: 800px;
+
+    .coded {
+      margin: 0 0 0.5rem;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .copyright {
+      text-align: left;
+    }
+  
+    .social {
+      text-align: right;
+    }
+  
+    .copyright, .social {
+      flex: 1;
+    }
+  }
+
+}
+
+
+/*--------------------------------------------------------------
+  App
+--------------------------------------------------------------*/
+.app {
+  background: var(--white);
+  bottom: 0;
+  display: flex;
+  flex-flow: column;
+  height: 75vw;
+  left: 0;
+  margin: auto;
+  max-height: 100vh;
+  max-width: 133.33vh;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw; 
+
+  .app__container {
+    flex: 1;
+  }
+}
+
+
+/*--------------------------------------------------------------
+  Language Selector
+--------------------------------------------------------------*/
+div.lang-cur-selector {
+  align-items: center;
+  background: linear-gradient(to right bottom,  rgba(209, 107, 165, 0.3), rgba(186, 131, 202, 0.3), rgba(170, 143, 216, 0.3), rgba(154, 154, 225, 0.3), rgba(138, 167, 236, 0.3), rgba(121, 179, 244, 0.3), rgba(105, 191, 248, 0.3), rgba(82, 207, 254, 0.3), rgba(65, 223, 255, 0.3), rgba(70, 238, 250, 0.3), rgba(95, 251, 241, 0.3)), url(https://www.toptal.com/designers/subtlepatterns/uploads/what-the-hex.png);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  transition: all 500ms linear;
+  top: 0;
+  width: 100%;
+
+  .lang-cur-selector__container {
+
+    ul {
+      background: var(--white);
+      list-style: none;
+      /* padding: 2rem; */
+
+      li {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        flex-flow: row;
+        padding: 1rem;
+        width: 100%;
+
+        .currency__flag {
+          margin: 0 1rem 0 0;
+          img {
+            width: 2rem;
+          }
+        }
+
+        .currency__icon {
+          align-items: center;
+          background: blue;
+          color: var(--white);
+          border-radius: 50%;
+          display: flex;
+          height: 2rem;
+          justify-content: center;
+          margin: 0 1rem 0 0;
+          width: 2rem;
+        }
+
+      }
+
+      li:hover {
+        background: rgba(127, 17, 224, 0.3);
+      }
+
+      li.active {
+          background: rgba(127, 17, 224, 0.5);
+      }
+    }
+  }
+}
+
+div.lang-cur-selector.active {
+  opacity: 1;
+}
+
+div.lang-cur-selector.inactive {
+  opacity: 0;
+}
