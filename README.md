@@ -1,8 +1,5 @@
 # Product Calculator
 
-> [!NOTE]
-> Client's branding has been removed.
-
 ## Demo
 [https://shibbled.github.io/product-calculator/](https://shibbled.github.io/product-calculator/)
 
@@ -14,3 +11,6 @@ The app must:
 - Only be built for iPads only (4:3)
 - Be able to translate into multiple different languages
 - Format correct currency depending on language selection
+
+> [!NOTE]
+> Client's branding has been removed.
