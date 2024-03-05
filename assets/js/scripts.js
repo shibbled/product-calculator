@@ -75,6 +75,8 @@ function fontResize() {
 	document.documentElement.style.fontSize = appWidth / 100 + 'px';
 }
 
+fontResize();
+
 window.addEventListener("resize", (event) => {
 	fontResize();
 });
