@@ -1,5 +1,8 @@
 # Product Calculator
 
+## Demo
+[https://shibbled.github.io/product-calculator/](https://shibbled.github.io/product-calculator/)
+
 ## Brief
 App is to be used by sales reps when advertising the products with health care professionals.
 
