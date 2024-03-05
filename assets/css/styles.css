@@ -83,6 +83,11 @@ footer {
       text-align: center;
       width: 100%;
 
+      svg {
+        height: 2rem;
+        width: 2rem;
+      }
+
       a {
         color: rgba(var(--black), 1);
         text-decoration: none;
@@ -128,9 +133,9 @@ button {
   color: rgba(var(--white), 1);
   cursor: pointer;
   display: flex;
+  font-size: 1rem;
   padding: 1rem;
   position: relative;
-  transition: all 500ms;
 
   span {
     svg {
@@ -327,10 +332,14 @@ table {
       background: none;
       border: none;
       border-bottom: .05rem solid rgba(var(--black), .4);
+      font-size: 1rem;
       height: 2rem;
       max-height: 2rem;
       text-align: center;
       max-width: 4rem;
+      -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
     }
     
     input[type="number"].empty {
