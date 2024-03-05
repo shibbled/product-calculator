@@ -2,8 +2,51 @@
 
 /* Colours
 ------------------------------ */
---black: #000000;
---white: #ffffff;
+--black: 0, 0, 0;
+--white: 255, 255, 255;
+
+
+/* --honeydew: 234, 242, 227;
+--flourescent-cyan: 97, 232, 225;
+--bittersweet: 242, 87, 87;
+--maize: 242, 232, 99;
+--naples-yellow: 242, 205, 96; */
+/* 
+--honeydew: #eaf2e3 234, 242, 227;
+--flourescent-cyan: #61e8e1 97, 232, 225
+--bittersweet: #f25757 242, 87, 87
+--maize: #f2e863 242, 232, 99
+--naples yellow: #f2cd60 242, 205, 96
+*/
+
+
+/*
+--light-red: 255, 116, 119;
+--light-coral: 230, 149, 151;
+--tea-rose: 206, 181, 183;
+--light-blue: 181, 214, 214;
+--ice-blue: 156, 246, 246; */
+/*
+--light-red: #ff7477 255, 116, 119;
+--light-coral: #e69597 230, 149, 151;
+--tea-rose: #ceb5b7 206, 181, 183;
+--light-blue: #b5d6d6  	181, 214, 214;
+--ice-blue: #9cf6f6 156, 246, 246;
+*/
+
+--tomato: 254, 74, 73;
+--moonstone: 42, 183, 202;
+--mustard: 254, 215, 102;
+--platinum: 230, 230, 234;
+--ghost-white: 244, 244, 248;
+
+/*
+--tomato: #fe4a49 254, 74, 73;
+--moonstone: #2ab7ca 42, 183, 202;
+--mustard: #fed766 254, 215, 102;
+--platinum: #e6e6ea 230, 230, 234;
+--ghost-white: f4f4f8 244, 244, 248;
+*/
 
 }
 
@@ -11,7 +54,7 @@
   Defauts
 --------------------------------------------------------------*/
 body, html {
-  background: var(--black);
+  background: rgba(var(--black), 1);
   font: 400 1rem sans-serif;
 
   * {
@@ -25,32 +68,25 @@ ul, ol {
 }
 
 footer {
-  /* color: var(--white); */
+  background: rgb(var(--ghost-white));
+  font-family: monospace;
+  z-index: 999;
   
   .footer__container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 1rem 0 0;
     max-width: 800px;
 
     .coded {
-      margin: 0 0 0.5rem;
       text-align: center;
       width: 100%;
-    }
-  
-    .copyright {
-      text-align: left;
-    }
-  
-    .social {
-      text-align: right;
-    }
-  
-    .copyright, .social {
-      flex: 1;
+
+      a {
+        color: rgba(var(--black), 1);
+        text-decoration: none;
+      }
     }
   }
 
@@ -61,7 +97,7 @@ footer {
   App
 --------------------------------------------------------------*/
 .app {
-  background: var(--white);
+  background: rgba(var(--white), 1);
   bottom: 0;
   display: flex;
   flex-flow: column;
@@ -81,27 +117,69 @@ footer {
   }
 }
 
+/*--------------------------------------------------------------
+  Global to both pages
+--------------------------------------------------------------*/
+button {
+  align-items: center;
+  background: rgba(var(--tomato), .9);
+  border: none;
+  border-radius: 2rem;
+  color: rgba(var(--white), 1);
+  cursor: pointer;
+  display: flex;
+  padding: 1rem;
+  position: relative;
+  transition: all 500ms;
+
+  span {
+    svg {
+      color: rgba(var(--white), 1);
+      fill: currentColor;
+      height: 0.8rem;
+    }
+  }
+}
+
+.currency__flag {
+  margin: 0 1rem 0 0;
+  img {
+    width: 2rem;
+  }
+}
+
+.currency__icon {
+  align-items: center;
+  background: rgb(var(--moonstone));
+  color: rgba(var(--white), 1);
+  border-radius: 50%;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  margin: 0 1rem 0 0;
+  width: 2rem;
+}
+
 
 /*--------------------------------------------------------------
   Language Selector
 --------------------------------------------------------------*/
-div.lang-cur-selector {
+div.langcur-selector {
   align-items: center;
-  background: linear-gradient(to right bottom,  rgba(209, 107, 165, 0.3), rgba(186, 131, 202, 0.3), rgba(170, 143, 216, 0.3), rgba(154, 154, 225, 0.3), rgba(138, 167, 236, 0.3), rgba(121, 179, 244, 0.3), rgba(105, 191, 248, 0.3), rgba(82, 207, 254, 0.3), rgba(65, 223, 255, 0.3), rgba(70, 238, 250, 0.3), rgba(95, 251, 241, 0.3)), url(https://www.toptal.com/designers/subtlepatterns/uploads/what-the-hex.png);
+  /* background: linear-gradient(to right bottom,  rgba(209, 107, 165, 0.3), rgba(186, 131, 202, 0.3), rgba(170, 143, 216, 0.3), rgba(154, 154, 225, 0.3), rgba(138, 167, 236, 0.3), rgba(121, 179, 244, 0.3), rgba(105, 191, 248, 0.3), rgba(82, 207, 254, 0.3), rgba(65, 223, 255, 0.3), rgba(70, 238, 250, 0.3), rgba(95, 251, 241, 0.3)), url(https://www.toptal.com/designers/subtlepatterns/uploads/what-the-hex.png); */
+  background: linear-gradient(to right bottom,  rgba(var(--tomato), 0.3), rgba(var(--moonstone), 0.3), rgba(var(--mustard), 0.3)), url(https://www.toptal.com/designers/subtlepatterns/uploads/what-the-hex.png);
   display: flex;
   height: 100%;
   justify-content: center;
   position: absolute;
-  transition: all 500ms linear;
   top: 0;
   width: 100%;
 
-  .lang-cur-selector__container {
+  .langcur-selector__container {
 
     ul {
-      background: var(--white);
+      background: rgba(var(--white), 1);
       list-style: none;
-      /* padding: 2rem; */
 
       li {
         align-items: center;
@@ -110,43 +188,170 @@ div.lang-cur-selector {
         flex-flow: row;
         padding: 1rem;
         width: 100%;
-
-        .currency__flag {
-          margin: 0 1rem 0 0;
-          img {
-            width: 2rem;
-          }
-        }
-
-        .currency__icon {
-          align-items: center;
-          background: blue;
-          color: var(--white);
-          border-radius: 50%;
-          display: flex;
-          height: 2rem;
-          justify-content: center;
-          margin: 0 1rem 0 0;
-          width: 2rem;
-        }
-
       }
 
       li:hover {
-        background: rgba(127, 17, 224, 0.3);
+        background: rgba(var(--platinum), 0.3);
       }
 
       li.active {
-          background: rgba(127, 17, 224, 0.5);
+          background: rgba(var(--platinum), 0.5);
       }
     }
   }
 }
 
-div.lang-cur-selector.active {
-  opacity: 1;
+/*--------------------------------------------------------------
+  Calculator : everything that isn't the table
+--------------------------------------------------------------*/
+div.calculator {
+  padding: 1rem;
+
+  header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem;
+
+    #header-title,
+    #land-change {
+      margin: 0 0 1rem;
+    }
+  
+   #header-title {
+    /* margin: 1rem 0; */
+   }
+  
+   #lang-change {
+    cursor: pointer;
+    display: flex;
+   }
+  }
+
+  div.table__net {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: bold;
+    justify-content: center;
+
+    div.table__net--text,
+    div.table__net--total {
+      padding: 1rem;
+    }
+
+    div.table__net--text {
+      background: rgba(var(--moonstone), 0.4);
+    }
+
+    div.table__net--total {
+      background: rgba(var(--moonstone), 0.7);
+    }
+  }
+
 }
 
-div.lang-cur-selector.inactive {
-  opacity: 0;
+div.calculator__warning {
+  text-align: right;
+  p {
+    margin: 0.5rem 0;
+  }
+}
+
+div.calculator__warning.empty {
+  p {
+    color: rgba(var(--tomato), 1);
+    font-weight: bold;
+  }
+}
+
+div.calculator__buttons {
+  display: flex;
+  justify-content: flex-end;
+
+  div.calculator__reset {
+    margin: 0 1rem 0 0;
+
+    button {
+      span {
+        svg {
+          margin: 0 0.5rem 0 0;
+        }
+      }
+    }
+  }
+  
+  div.calculator__calculate {
+    button {
+      span {
+        svg {
+          margin: 0 0 0 0.5rem;
+        }
+      }
+    }
+  }
+
+}
+
+/*--------------------------------------------------------------
+  Calculator : Table
+--------------------------------------------------------------*/
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  
+  th, td {
+    padding: 1rem;
+  }
+
+
+  th.table__heading,
+  th.table__total--head {
+    background: rgba(var(--mustard), 1);
+  }
+
+  th.table__subheading,
+  th.table__current,
+  th.table__new {
+    background: rgba(var(--mustard), 0.7);
+  }
+
+  th.table__subheading {
+    text-align: left;
+  }
+
+  td {
+    text-align: center;
+
+    input {
+      background: none;
+      border: none;
+      border-bottom: .05rem solid rgba(var(--black), .4);
+      height: 2rem;
+      max-height: 2rem;
+      text-align: center;
+      max-width: 4rem;
+    }
+    
+    input[type="number"].empty {
+      border: 0.125rem solid rgba(var(--tomato), 1);
+      border-radius: .3rem;
+    }
+  }
+
+  td.empty {
+    background: rgba(var(--ghost-white));
+  }
+
+  td.table__required {
+    background: rgba(var(--mustard), 0.3);
+  }
+
+  td.table__preset {
+    background: rgba(var(--mustard), 0.3);
+  }
+
+  td.table__total--data {
+    background: rgba(var(--mustard), 0.7);
+  }
 }
