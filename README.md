@@ -1,5 +1,8 @@
 # Product Calculator
 
+> [!NOTE]
+> Client's branding has been removed.
+
 ## Demo
 [https://shibbled.github.io/product-calculator/](https://shibbled.github.io/product-calculator/)
 
